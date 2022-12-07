@@ -30,6 +30,18 @@
     <ClCompile Include="Facade\Facade.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Iterator\Iterator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Adapter\Adapter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TemplateMethod\TemplateMethod.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RAII\RAII.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Servant\Servant.h">
@@ -42,6 +54,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Facade\Facade.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Iterator\Iterator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Adapter\Adapter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TemplateMethod\TemplateMethod.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RAII\RAII.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
