@@ -11,10 +11,10 @@ using namespace std;
 
 int main()
 {
-	TestServant();
-	TestVisitor();
-	TestChainOfResponsibility();
-	TestFacade();
+	testServant();
+	testVisitor();
+	testChainOfResponsibility();
+	testFacade();
 	testIterator();
 	testAdaptor();
 	testTemplateMethod();
