@@ -8,10 +8,10 @@ class Handler
 public:
     Handler();
     virtual ~Handler();
-    void SetNextHandler(Handler* next);
-    virtual void HandleRequest(int level);
+    void setNextHandler(Handler* next);
+    virtual void handleRequest(int level);
 protected:
-    Handler* NextHandler;
+    Handler* nextHandler;
 };
 
 class InterimCommittee :public Handler
@@ -19,7 +19,7 @@ class InterimCommittee :public Handler
 public:
     InterimCommittee();
     ~InterimCommittee() override;
-    void HandleRequest(int level);
+    void handleRequest(int level);
 };
 
 class ExecutiveCommittee :public Handler
@@ -27,7 +27,7 @@ class ExecutiveCommittee :public Handler
 public:
     ExecutiveCommittee();
     ~ExecutiveCommittee() override;
-    void HandleRequest(int level);
+    void handleRequest(int level);
 };
 
 class PlenarySession :public Handler
@@ -35,7 +35,7 @@ class PlenarySession :public Handler
 public:
     PlenarySession();
     ~PlenarySession() override;
-    void HandleRequest(int level);
+    void handleRequest(int level);
 };
 
-void TestChainOfResponsibility();
+void testChainOfResponsibility();

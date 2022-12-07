@@ -10,147 +10,146 @@ using namespace std;
 class VisitorFootBall;
 class FootBallData {
 public:
-    FootBallData() {};
     ~FootBallData() {};
-    void SetData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY);
-    int RedPoint;
-    int BluePoint;
-    int RedFoulTimes;
-    int BlueFoulTimes;
-    string Countary;
+    void setData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY);
+    int redPoint;
+    int bluePoint;
+    int redFoulTimes;
+    int blueFoulTimes;
+    string countary;
 };
 
 //以足球为例
 class FootBall {
 private:
-    FootBallData _footballdata;
-    const std::string _name;
+    FootBallData footballdata;
+    const std::string name;
 public:
     FootBall(const std::string& name);
     virtual ~FootBall() {};
-    virtual void SetFootBallData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY) {};
-    virtual int RedPoint();
-    virtual int BluePoint();
-    virtual int RedFoulTimes();
-    virtual int BlueFoulTimes();
-    virtual string Countary();
+    virtual void setFootBallData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY) {};
+    virtual int redPoint();
+    virtual int bluePoint();
+    virtual int redFoulTimes();
+    virtual int blueFoulTimes();
+    virtual string countary();
 };
 
 //定义决赛类
 class Final :public FootBall {
 private:
-    FootBallData _footballdata;
+    FootBallData footballdata;
 public:
     Final(const std::string& name);
     ~Final() override {};
-    void SetFootBallData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY) override;
-    int RedPoint() override;
-    int BluePoint() override;
-    int RedFoulTimes() override;
-    int BlueFoulTimes() override;
-    string Countary() override;
+    void setFootBallData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY) override;
+    int redPoint() override;
+    int bluePoint() override;
+    int redFoulTimes() override;
+    int blueFoulTimes() override;
+    string countary() override;
 };
 //定义半决赛类
 class SemiFinal :public FootBall {
 private:
-    FootBallData _footballdata;
+    FootBallData footballdata;
 public:
     SemiFinal(const std::string& name);
     ~SemiFinal() override {};
-    virtual void SetFootBallData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY) override;
-    virtual int RedPoint() override;
-    virtual int BluePoint() override;
-    virtual int RedFoulTimes() override;
-    virtual int BlueFoulTimes() override;
-    virtual string Countary() override;
+    virtual void setFootBallData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY) override;
+    virtual int redPoint() override;
+    virtual int bluePoint() override;
+    virtual int redFoulTimes() override;
+    virtual int blueFoulTimes() override;
+    virtual string countary() override;
 };
 
 //定义小组赛类
 class GroupGame :public FootBall {
 private:
-    FootBallData _footballdata;
+    FootBallData footballdata;
 public:
     GroupGame(const std::string& name);
     ~GroupGame() override {};
-    void SetFootBallData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY) override;
-    int RedPoint() override;
-    int BluePoint() override;
-    int RedFoulTimes() override;
-    int BlueFoulTimes() override;
-    string Countary() override;
+    void setFootBallData(int REDPOINT, int BLUEPOINT, int REDFOULTIMES, int BLUEFOULTIMES, string COUNTARY) override;
+    int redPoint() override;
+    int bluePoint() override;
+    int redFoulTimes() override;
+    int blueFoulTimes() override;
+    string countary() override;
 };
 
 class VisitorFootBall {
 private:
-    int _total = 0;
+    int total = 0;
 protected:
     VisitorFootBall() {};
 public:
     virtual ~VisitorFootBall() {};
-    virtual void Visit(Final*) {};
-    virtual void Visit(SemiFinal*) {};
-    virtual void Visit(GroupGame*) {};
+    virtual void visit(Final*) {};
+    virtual void visit(SemiFinal*) {};
+    virtual void visit(GroupGame*) {};
 };
 
 
 class VisitorFootBallRedPoint : public VisitorFootBall {
 private:
-    int _total = 0;
+    int total = 0;
 public:
     VisitorFootBallRedPoint() {};
     ~VisitorFootBallRedPoint() override {};
-    int& GetRedPoint();
-    void Visit(Final* final) override;
-    void Visit(SemiFinal* semifinal1) override;
-    void Visit(GroupGame* groupgame) override;
+    int& getRedPoint();
+    void visit(Final* final) override;
+    void visit(SemiFinal* semifinal1) override;
+    void visit(GroupGame* groupgame) override;
 };
 
 class VisitorFootBallBluePoint : public VisitorFootBall {
 private:
-    int _total = 0;
+    int total = 0;
 public:
     VisitorFootBallBluePoint() {};
     ~VisitorFootBallBluePoint() override {};
-    int& GetBluePoint();
-    void Visit(Final* final) override;
-    void Visit(SemiFinal* semifinal1) override;
-    void Visit(GroupGame* groupgame) override;
+    int& getBluePoint();
+    void visit(Final* final) override;
+    void visit(SemiFinal* semifinal1) override;
+    void visit(GroupGame* groupgame) override;
 };
 
 class VisitorFootBallRedFoulTimes : public VisitorFootBall {
 private:
-    int _total = 0;
+    int total = 0;
 public:
     VisitorFootBallRedFoulTimes() {};
     ~VisitorFootBallRedFoulTimes() override {};
-    int& GetRedFoulTimes();
-    void Visit(Final* final) override;
-    void Visit(SemiFinal* semifinal1) override;
-    void Visit(GroupGame* groupgame) override;
+    int& getRedFoulTimes();
+    void visit(Final* final) override;
+    void visit(SemiFinal* semifinal1) override;
+    void visit(GroupGame* groupgame) override;
 };
 
 class VisitorFootBallBlueFoulTimes : public VisitorFootBall {
 private:
-    int _total = 0;
+    int total = 0;
 public:
     VisitorFootBallBlueFoulTimes() {};
     ~VisitorFootBallBlueFoulTimes() override {};
-    int& GetBlueFoulTimes();
-    void Visit(Final* final) override;
-    void Visit(SemiFinal* semifinal1) override;
-    void Visit(GroupGame* groupgame) override;
+    int& getBlueFoulTimes();
+    void visit(Final* final) override;
+    void visit(SemiFinal* semifinal1) override;
+    void visit(GroupGame* groupgame) override;
 };
 
 class VisitorFootBallCountary : public VisitorFootBall {
 private:
-    string _total;
+    string total;
 public:
     VisitorFootBallCountary() {};
     ~VisitorFootBallCountary() override {};
-    string& GetCountary();
-    void Visit(Final* final) override;
-    void Visit(SemiFinal* semifinal1) override;
-    void Visit(GroupGame* groupgame) override;
+    string& getCountary();
+    void visit(Final* final) override;
+    void visit(SemiFinal* semifinal1) override;
+    void visit(GroupGame* groupgame) override;
 };
 
-void TestVisitor();
+void testVisitor();

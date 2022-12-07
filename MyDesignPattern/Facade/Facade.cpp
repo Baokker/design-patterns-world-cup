@@ -3,7 +3,7 @@
 
 vector<HotelInfo*> Hotel::hotelList;
 
-void Hospital::AccountingDetection()
+void Hospital::accountingDetection()
 {
     cout << "样本正在进行核酸检测" << endl;
 };
@@ -12,7 +12,7 @@ HotelInfo::HotelInfo(string h, string l) :
     hotelName(h), location(l) {}
 
 // 采用多例模式创建的酒店
-void Hotel::CheckIn()
+void Hotel::checkIn()
 {
     if (hotelList.size() == 0) {
         hotelList.push_back(new HotelInfo("格林豪泰", "场地外围一环路"));
@@ -25,41 +25,41 @@ void Hotel::CheckIn()
     //HotelInfo* info = new HotelInfo("Great Hotel", "Heping Street");
     cout << "成功入住" << info->hotelName << "酒店，酒店位于" << info->location << endl;
 }
-void Hotel::Sampling()
+void Hotel::sampling()
 {
     cout << "已进行核酸采样，样本将送往医院进行检测" << endl;
 }
 
 
-void Transportation::GetVehicle()
+void Transportation::getVehicle()
 {
     cout << "已经安排了一辆专车为他们服务" << endl;
 }
 
-void Training::TrainingLocation()
+void Training::trainingLocation()
 {
     cout << "安排了专属培训场地" << endl;
 }
 
-void Facade::Detection()
+void Facade::detection()
 {
-    _hotel->Sampling();
-    _hospital->AccountingDetection();
+    hotel->sampling();
+    hospital->accountingDetection();
 }
 
-void Facade::AppointTraining()
+void Facade::appointTraining()
 {
-    _training->TrainingLocation();
-    _transportation->GetVehicle();
+    training->trainingLocation();
+    transportation->getVehicle();
 }
 
-void Facade::CheckIn()
+void Facade::checkIn()
 {
-    _transportation->GetVehicle();
-    _hotel->CheckIn();
+    transportation->getVehicle();
+    hotel->checkIn();
 }
 
-void TestFacade()
+void testFacade()
 {
     srand((unsigned)time(0));
     Facade _facade;
@@ -67,9 +67,9 @@ void TestFacade()
     for (int i = 1; i < 6; i++)
     {
         cout << "第 " << i << " 批运动员们来到比赛居住地" << endl;;
-        _facade.CheckIn();
-        _facade.Detection();
-        _facade.AppointTraining();
+        _facade.checkIn();
+        _facade.detection();
+        _facade.appointTraining();
         cout << endl;
     }
 }

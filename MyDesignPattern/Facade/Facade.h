@@ -10,7 +10,7 @@ class Hospital
 public:
     Hospital() {};
     ~Hospital() {};
-    void AccountingDetection();
+    void accountingDetection();
 };
 
 struct HotelInfo {
@@ -29,8 +29,8 @@ private:
 public:
     Hotel() {};
     ~Hotel() {};
-    void CheckIn();
-    void Sampling();
+    void checkIn();
+    void sampling();
 };
 
 
@@ -40,7 +40,7 @@ class Transportation
 public:
     Transportation() {};
     ~Transportation() {};
-    void GetVehicle();
+    void getVehicle();
 };
 
 //Training
@@ -49,7 +49,7 @@ class Training
 public:
     Training() {};
     ~Training() {};
-    void TrainingLocation();
+    void trainingLocation();
 };
 
 //Facade
@@ -58,17 +58,17 @@ class Facade
 public:
     ~Facade() {};
     //nucleic acid test
-    void Detection();
+    void detection();
     //Appointment training
-    void AppointTraining();
+    void appointTraining();
     //Handle settlement
-    void CheckIn();
+    void checkIn();
 private:
-    Hospital* _hospital;
-    Hotel* _hotel;
-    Transportation* _transportation;
-    Training* _training;
+    Hospital* hospital;
+    Hotel* hotel;
+    Transportation* transportation;
+    Training* training;
 };
 
 
-void TestFacade();
+void testFacade();

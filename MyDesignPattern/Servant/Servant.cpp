@@ -3,18 +3,18 @@
 
 using namespace std;
 
-void Servant::CheckingLuggage(Luggage luggage[], string nameList[])
+void Servant::checkingLuggage(Luggage luggage[], string nameList[])
 {
 
 	cout << "开始检查行李" << endl <<endl;
 
 	for (int i = 0; i < 6; i++)
 	{
-		luggage[i].SettingOwner(nameList[i]);
+		luggage[i].settingOwner(nameList[i]);
 		cout << i << "号行李" << endl;
-		cout << "行李名：                  " << luggage[i].LuggageName << endl;
-		cout << "行李尺寸：                " << luggage[i].LuggageSize << endl;
-		cout << "行李所有者：              " << luggage[i].LuggageOwner << endl;
+		cout << "行李名：                  " << luggage[i].luggageName << endl;
+		cout << "行李尺寸：                " << luggage[i].luggageSize << endl;
+		cout << "行李所有者：              " << luggage[i].luggageOwner << endl;
 		cout << endl;
 	}
 
@@ -22,7 +22,7 @@ void Servant::CheckingLuggage(Luggage luggage[], string nameList[])
 
 }
 
-void Servant::HandlingLuggage(Luggage luggage[])
+void Servant::handlingLuggage(Luggage luggage[])
 {
 	string smallSize = "小型";
 	string mediumSize = "中型";
@@ -33,16 +33,16 @@ void Servant::HandlingLuggage(Luggage luggage[])
 	for (int i = 0; i < 6; i++)
 	{
 		cout << endl;
-		cout << "当前的行李是：" << luggage[i].LuggageName << endl;
-		cout << "行李的尺寸为：" << luggage[i].LuggageSize << endl;
+		cout << "当前的行李是：" << luggage[i].luggageName << endl;
+		cout << "行李的尺寸为：" << luggage[i].luggageSize << endl;
 		
 		cout << "雇工开始搬运" << endl;
 
-		if (smallSize == luggage[i].LuggageSize)
+		if (smallSize == luggage[i].luggageSize)
 		{
 			cout << "雇工表示搬运起来很轻松" << endl;
 		}
-		else if (mediumSize == luggage[i].LuggageSize)
+		else if (mediumSize == luggage[i].luggageSize)
 		{
 			cout << "雇工表示搬运起来还算可以" << endl;
 		}
@@ -51,13 +51,13 @@ void Servant::HandlingLuggage(Luggage luggage[])
 			cout << "雇工使出了吃奶的劲儿" << endl;
 		}
 
-		cout << "雇工成功将物品搬运到了" << luggage[i].LuggageOwner << "的房间里" << endl << endl;
+		cout << "雇工成功将物品搬运到了" << luggage[i].luggageOwner << "的房间里" << endl << endl;
 	}
 
 	cout << "雇工结束搬运工作" << endl << endl;
 }
 
-void TestServant()
+void testServant()
 {
 	//行李列表
 	Luggage luggage[6];
@@ -95,8 +95,8 @@ void TestServant()
 	luggage[5] = table;
 
 	//雇工检查行李
-	servant.CheckingLuggage(luggage, nameList);
+	servant.checkingLuggage(luggage, nameList);
 	//雇工搬运行李
-	servant.HandlingLuggage(luggage);
+	servant.handlingLuggage(luggage);
 
 }
