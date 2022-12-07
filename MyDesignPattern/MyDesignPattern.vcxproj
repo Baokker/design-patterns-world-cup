@@ -139,16 +139,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adapter\Adapter.cpp" />
     <ClCompile Include="ChainOfResponsibility\ChainOfResponsibility.cpp" />
     <ClCompile Include="Facade\Facade.cpp" />
+    <ClCompile Include="Iterator\Iterator.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="RAII\RAII.cpp" />
     <ClCompile Include="Servant\Servant.cpp" />
+    <ClCompile Include="TemplateMethod\TemplateMethod.cpp" />
     <ClCompile Include="Visitor\Visitor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Adapter\Adapter.h" />
     <ClInclude Include="ChainOfResponsibility\ChainOfResponsibility.h" />
     <ClInclude Include="Facade\Facade.h" />
+    <ClInclude Include="Iterator\Iterator.h" />
+    <ClInclude Include="RAII\RAII.h" />
     <ClInclude Include="Servant\Servant.h" />
+    <ClInclude Include="TemplateMethod\TemplateMethod.h" />
     <ClInclude Include="Visitor\Visitor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
