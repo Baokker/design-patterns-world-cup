@@ -29,26 +29,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -142,8 +142,11 @@
     <ClCompile Include="Adapter\Adapter.cpp" />
     <ClCompile Include="ChainOfResponsibility\ChainOfResponsibility.cpp" />
     <ClCompile Include="Facade\Facade.cpp" />
+    <ClCompile Include="FactoryMethod\FactoryMethod.cpp" />
     <ClCompile Include="Iterator\Iterator.cpp" />
+    <ClCompile Include="LazyInitialization\LazyInitialization.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Prototype\Prototype.cpp" />
     <ClCompile Include="RAII\RAII.cpp" />
     <ClCompile Include="Servant\Servant.cpp" />
     <ClCompile Include="TemplateMethod\TemplateMethod.cpp" />
@@ -153,7 +156,10 @@
     <ClInclude Include="Adapter\Adapter.h" />
     <ClInclude Include="ChainOfResponsibility\ChainOfResponsibility.h" />
     <ClInclude Include="Facade\Facade.h" />
+    <ClInclude Include="FactoryMethod\FactoryMethod.h" />
     <ClInclude Include="Iterator\Iterator.h" />
+    <ClInclude Include="LazyInitialization\LazyInitialization.h" />
+    <ClInclude Include="Prototype\Prototype.h" />
     <ClInclude Include="RAII\RAII.h" />
     <ClInclude Include="Servant\Servant.h" />
     <ClInclude Include="TemplateMethod\TemplateMethod.h" />

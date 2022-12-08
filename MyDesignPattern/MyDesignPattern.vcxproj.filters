@@ -42,6 +42,15 @@
     <ClCompile Include="RAII\RAII.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="FactoryMethod\FactoryMethod.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Prototype\Prototype.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LazyInitialization\LazyInitialization.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Servant\Servant.h">
@@ -66,6 +75,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="RAII\RAII.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FactoryMethod\FactoryMethod.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Prototype\Prototype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LazyInitialization\LazyInitialization.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

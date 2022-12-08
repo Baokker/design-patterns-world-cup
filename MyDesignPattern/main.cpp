@@ -6,6 +6,9 @@
 #include "Iterator/Iterator.h"
 #include "Adapter/Adapter.h"
 #include "TemplateMethod/TemplateMethod.h"
+#include "FactoryMethod/FactoryMethod.h"
+#include "Prototype/Prototype.h"
+#include "LazyInitialization/LazyInitialization.h"
 
 using namespace std;
 
@@ -18,6 +21,9 @@ int main()
 	testIterator();
 	testAdaptor();
 	testTemplateMethod();
+	testFactoryMethod();
+	testPrototype();
+	testLazyInitialization();
 
 	return 0;
 }

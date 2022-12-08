@@ -130,7 +130,7 @@ public:
  * product subclass to the client code without breaking it.
  */
 
-void ClientCode(const AbstractFactory& factory) {
+void AbstractClientCode(const AbstractFactory& factory) {
     const AbstractFlag* flag = factory.CreateFlag();
     const AbstractClothes* clothes = factory.CreateClothes();
     std::cout << clothes->UsefulFunctionClothes() << "\n";
@@ -143,11 +143,11 @@ void testAbstractfactory() {
     std::cout << "现要使用抽象工厂模式来生产不同国家的队服和国旗，不同国家风格的装备配合使用，不同国家的装备不能配合使用。\n\n";
     std::cout << "客户端测试:\n阿根廷风格装备生产工厂的测试\n";
     ARGFactory* f1 = new ARGFactory();
-    ClientCode(*f1);
+    AbstractClientCode(*f1);
     delete f1;
     std::cout << std::endl;
     std::cout << "客户端测试:\n葡萄牙风格装备生产工厂的测试\n";
     PORFactory* f2 = new PORFactory();
-    ClientCode(*f2);
+    AbstractClientCode(*f2);
     delete f2;
 }
