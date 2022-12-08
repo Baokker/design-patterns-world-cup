@@ -9,6 +9,7 @@
 #include "FactoryMethod/FactoryMethod.h"
 #include "Prototype/Prototype.h"
 #include "LazyInitialization/LazyInitialization.h"
+#include "Decorator/Decorator.h"
 
 using namespace std;
 
@@ -25,5 +26,6 @@ int main()
 	testPrototype();
 	testLazyInitialization();
 
+	testDecorate();
 	return 0;
 }

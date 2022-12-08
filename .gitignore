@@ -1,4 +1,3 @@
 .vs/
 x64/
-MyDesignPattern/MyDesignPattern.vcxproj
-MyDesignPattern/MyDesignPattern.vcxproj.filters
+MyDesignPattern/MyDesignPattern.vcxproj*
