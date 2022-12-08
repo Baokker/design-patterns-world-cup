@@ -6,6 +6,7 @@
 #include "Iterator/Iterator.h"
 #include "Adapter/Adapter.h"
 #include "TemplateMethod/TemplateMethod.h"
+#include "Decorator/Decorator.h"
 
 using namespace std;
 
@@ -18,6 +19,6 @@ int main()
 	testIterator();
 	testAdaptor();
 	testTemplateMethod();
-
+	testDecorate();
 	return 0;
 }
