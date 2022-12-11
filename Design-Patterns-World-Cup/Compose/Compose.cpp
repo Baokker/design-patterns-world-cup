@@ -10,12 +10,12 @@ int testCompose() {
     Component* tree = new Composite;
     Component* container1 = new Composite;
 
-    Component* item1 = new Item(std::string("item 1"));
-    Component* item2 = new Item(std::string("item 2"));
-    Component* item3 = new Item(std::string("item 3"));
-    Component* item4 = new Item(std::string("item 4"));
-    Component* item5 = new Item(std::string("item 5"));
-
+    Component* item1 = new Item(std::string("运动耳机"));
+    Component* item2 = new Item(std::string("三星手机"));
+    Component* item3 = new Item(std::string("水杯防滑套"));
+    Component* item4 = new Item(std::string("运动水杯"));
+    Component* item5 = new Item(std::string("纪念品挂件"));
+    
     container1->Add(item1);
     container1->Add(item2);
 
@@ -37,6 +37,8 @@ int testCompose() {
     delete item1;
     delete item2;
     delete item3;
+    delete item4;
+    delete item5;
 
     return 0;
 }

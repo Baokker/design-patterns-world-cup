@@ -49,9 +49,9 @@ void printFiletr(list<PlayerFilter> players)
 {
     for (PlayerFilter player : players)
     {
-        std::cout << "Person : [ Name : " << player.getName()
-            << ", Gender : " << player.getGender()
-            << ", Age : " << player.getAge()
+        std::cout << "Person : [ 姓名 : " << player.getName()
+            << ", 性别 : " << player.getGender()
+            << ", 年龄 : " << player.getAge()
             << " ] \n";
     }
 }
